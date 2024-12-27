@@ -1,0 +1,71 @@
+@import 'libs1/vars1';
+@import 'libs1/functions1';
+@import 'libs1/mixins1';
+@import 'libs1/vendor1';
+@import 'libs1/breakpoints1';
+@import 'libs1/html-grid1';
+@import 'libs1/fixed-grid1';
+@import 'fontawesome1.css';
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900');
+
+/*
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+// Breakpoints.
+
+	@include breakpoints((
+		default:   (1681px,   null     ),
+		xlarge:    (1281px,   1680px   ),
+		large:     (981px,    1280px   ),
+		medium:    (737px,    980px    ),
+		small:     (481px,    736px    ),
+		xsmall:    (361px,    480px    ),
+		xxsmall:   (null,     360px    )
+	));
+
+// Mixins.
+
+	@mixin color($p) {
+		@include color-typography($p);
+		@include color-box($p);
+		@include color-button($p);
+		@include color-form($p);
+		@include color-list($p);
+		@include color-section($p);
+		@include color-table($p);
+		@include color-pagination($p);
+	}
+
+// Base.
+
+	@import 'base1/reset1';
+	@import 'base1/page1';
+	@import 'base1/typography1';
+
+// Component.
+
+	@import 'components1/row1';
+	@import 'components1/box1';
+	@import 'components1/button1';
+	@import 'components1/form1';
+	@import 'components1/icon1';
+	@import 'components1/image1';
+	@import 'components1/actions1';
+	@import 'components1/icons1';
+	@import 'components1/list1';
+	@import 'components1/section1';
+	@import 'components1/table1';
+	@import 'components1/pagination1';
+
+// Layout.
+
+	@import 'layout1/wrapper1';
+	@import 'layout1/intro1';
+	@import 'layout1/header1';
+	@import 'layout1/nav1';
+	@import 'layout1/main1';
+	@import 'layout1/footer1';
+	@import 'layout1/navPanel1';
